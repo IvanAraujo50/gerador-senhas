@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+
+.ibm-plex-mono-medium {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('assets/images/background.jpg');
+  background-size: cover; /* Faz a imagem cobrir todo o elemento */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  display: flex; /* Usa flexbox no body */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+  height: 100vh; /* Faz com que o body ocupe toda a altura da janela */
+}
+
+/* Estilos do wrapper */
+.wrapper {
+  text-align: center; /* Centraliza o texto e o container */
+  display: flex; /* Usa flexbox no wrapper */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+  height: 100%; /* Faz com que o wrapper ocupe toda a altura disponível */
+  gap: 10px;
+}
+
+/* Estilos do container */
+.container {
+  background-color: rgba(8, 21, 27, 0.5); /* Cor de fundo com 40% de opacidade */
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para um efeito de profundidade */
+  padding: 20px;
+  width: 300px; /* Largura do container */
+  text-align: center; /* Centraliza o texto e os elementos */
+  backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+  position: relative; /* Necessário para a animação */
+  overflow: hidden; /* Garante que a animação não ultrapasse o container */
+  animation: bordaLoop 2s infinite linear; /* Adiciona a animação da borda */
+}
+
+/* Animação da borda do container */
+@keyframes bordaLoop {
+  0% {
+      box-shadow: 0 0 0 3px rgba(107, 254, 245, 0.7);
+  }
+  25% {
+      box-shadow: 0 0 0 6px rgba(107, 254, 245, 0.4);
+  }
+  50% {
+      box-shadow: 0 0 0 3px rgba(107, 254, 245, 0.7);
+  }
+  75% {
+      box-shadow: 0 0 0 6px rgba(107, 254, 245, 0.4);
+  }
+  100% {
+      box-shadow: 0 0 0 3px rgba(107, 254, 245, 0.7);
+  }
+}
+
+.container button {
+  font-family: "IBM Plex Mono", monospace;
+  padding: 2%;
+  margin: 12px;
+  border: 2px solid #000000; /* Borda visível ao redor do botão */
+  border-radius: 4px; /* Cantos arredondados */
+  background-color: #ffffff; /* Cor de fundo do botão */
+  color: #000000; /* Cor do texto do botão */
+  cursor: pointer;
+  font-size: 15px;
+  width: auto;
+  transition: background-color 0.3s, border-color 0.3s; /* Transição suave */
+}
+
+.container button:hover {
+  background-color: #6bfef5; /* Cor do fundo quando o cursor está sobre o botão */
+  border-color: #ffffff; /* Cor da borda quando o cursor está sobre o botão */
+  color: #000000; /* Cor do texto quando o cursor está sobre o botão (opcional) */
+}
+
+
+.password-text {
+  color: #6bfef5; /* Cor do texto */
+  padding: 4px; /* Espaçamento interno */
+  border-radius: 4px; /* Cantos arredondados */
+  font-size: 1.0em; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  margin: 6px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #333;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333;
+  }
+}
+
