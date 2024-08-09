@@ -40,7 +40,7 @@ function App() {
 
   // Renderiza a interface do usuário
   return (
-    <div className="wrapper">
+    <div className="wrapper">    
       <div className="container">
         <h1 id="titulonpm">Gerador de Senhas</h1>
         <button onClick={generate}>Gerar!</button>
